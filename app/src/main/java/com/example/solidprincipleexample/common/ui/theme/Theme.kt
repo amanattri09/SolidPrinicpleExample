@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.ui.theme
+package com.example.solidprincipleexample.common.ui.theme
 
 import android.app.Activity
 import android.os.Build

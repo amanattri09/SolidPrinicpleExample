@@ -1,16 +1,16 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.solution.player
 
 import android.content.Context
-import com.example.solidprincipleexample.b_open_closed.problem.MediaActivity
+import com.example.solidprincipleexample.b_open_closed.problem.MediaActivityV3
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 
-class ExoPlayer constructor(context: Context) : IPlayer {
+class ExoPlayerV1 constructor(context: Context) : IPlayerV1 {
 
     private val exoPlayer: ExoPlayer = ExoPlayer.Builder(context).build()
 
     init {
-        exoPlayer.setMediaItem(MediaItem.fromUri(MediaActivity.MEDIA_URI))
+        exoPlayer.setMediaItem(MediaItem.fromUri(MediaActivityV3.MEDIA_URI))
         exoPlayer.prepare()
     }
 

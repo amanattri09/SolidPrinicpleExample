@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample
+package com.example.solidprincipleexample.common
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.solidprincipleexample.ui.theme.SolidPrincipleExampleTheme
+import com.example.solidprincipleexample.common.ui.theme.SolidPrincipleExampleTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

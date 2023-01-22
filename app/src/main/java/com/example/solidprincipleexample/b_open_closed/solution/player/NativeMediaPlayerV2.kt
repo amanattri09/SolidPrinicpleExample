@@ -1,13 +1,13 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.solution.player
 
 import android.media.MediaPlayer
-import com.example.solidprincipleexample.b_open_closed.problem.MediaActivity
+import com.example.solidprincipleexample.b_open_closed.problem.MediaActivityV3
 
-class NativeMediaPlayer : IPlayer {
+class NativeMediaPlayerV2 : IPlayerV1 {
 
     private val nativeMediaPlayer = MediaPlayer()
     init {
-        nativeMediaPlayer.setDataSource(MediaActivity.MEDIA_URI)
+        nativeMediaPlayer.setDataSource(MediaActivityV3.MEDIA_URI)
         nativeMediaPlayer.prepareAsync()
     }
 

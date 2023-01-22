@@ -1,6 +1,6 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.solution.player
 
-interface IPlayer {
+interface IPlayerV2 {
 
     fun start()
 
