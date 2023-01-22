@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.a_singleresponsibilty.problem
+package com.example.solidprincipleexample.b_open_closed.problem
 
 import android.content.Context
 import android.content.Intent
@@ -7,10 +7,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.solidprincipleexample.R
+import com.example.solidprincipleexample.a_singleresponsibilty.problem.MediaActivity
 import com.example.solidprincipleexample.b_open_closed.common.EXTRAS
 import com.example.solidprincipleexample.b_open_closed.common.EXTRAS.PLAYER_TYPE
 import com.example.solidprincipleexample.b_open_closed.common.MEDIA_PLAYER_TYPE
-import com.example.solidprincipleexample.b_open_closed.problem.MediaActivity
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 

@@ -20,14 +20,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".a_singleresponsibilty.problem.MediaActivity"
+            android:name=".b_open_closed.problem.MediaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".a_singleresponsibilty.solution.MediActivity_V2"
+            android:name=".b_open_closed.solution.MediActivity_V2"
             android:exported="true">
 
             <!--
