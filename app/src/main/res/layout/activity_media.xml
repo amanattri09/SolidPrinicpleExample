@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".b_open_closed.problem.MediaActivityV3">
+    tools:context=".b_open_closed.example1.problem.MediaActivityV3">
 
     <Button
         android:id="@+id/btnPlaySong"

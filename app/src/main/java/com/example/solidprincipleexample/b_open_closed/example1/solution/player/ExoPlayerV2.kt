@@ -1,7 +1,7 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.solution.player
 
 import android.content.Context
-import com.example.solidprincipleexample.b_open_closed.problem.MediaActivityV3
+import com.example.solidprincipleexample.b_open_closed.example1.problem.MediaActivityV3
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 

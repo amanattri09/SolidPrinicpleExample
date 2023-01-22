@@ -7,10 +7,10 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.solidprincipleexample.R
-import com.example.solidprincipleexample.b_open_closed.common.EXTRAS
-import com.example.solidprincipleexample.b_open_closed.common.EXTRAS.PLAYER_TYPE
-import com.example.solidprincipleexample.b_open_closed.common.MEDIA_PLAYER_TYPE
-import com.example.solidprincipleexample.b_open_closed.problem.MediaActivityV3
+import com.example.solidprincipleexample.b_open_closed.example1.common.EXTRAS
+import com.example.solidprincipleexample.b_open_closed.example1.common.EXTRAS.PLAYER_TYPE
+import com.example.solidprincipleexample.b_open_closed.example1.common.MEDIA_PLAYER_TYPE
+import com.example.solidprincipleexample.b_open_closed.example1.problem.MediaActivityV3
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 

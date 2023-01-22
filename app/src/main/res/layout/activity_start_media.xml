@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".b_open_closed.common.StartMediaActivityV2">
+    tools:context=".b_open_closed.example1.common.StartMediaActivityV2">
 
     <Button
         android:id="@+id/button"

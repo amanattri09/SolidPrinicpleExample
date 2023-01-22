@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.b_open_closed.solution
+package com.example.solidprincipleexample.b_open_closed.example1.solution
 
 import android.content.Context
 import android.content.Intent
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.solidprincipleexample.R
 import com.example.solidprincipleexample.a_singleresponsibilty.solution.MediActivity_V2
-import com.example.solidprincipleexample.b_open_closed.common.EXTRAS
-import com.example.solidprincipleexample.b_open_closed.common.MEDIA_PLAYER_TYPE
+import com.example.solidprincipleexample.b_open_closed.example1.common.EXTRAS
+import com.example.solidprincipleexample.b_open_closed.example1.common.MEDIA_PLAYER_TYPE
 import com.example.solidprincipleexample.a_singleresponsibilty.solution.player.IPlayerV1
 import com.example.solidprincipleexample.a_singleresponsibilty.solution.player.PlayerFactoryV1
 

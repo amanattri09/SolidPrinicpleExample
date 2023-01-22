@@ -1,7 +1,7 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.solution.player
 
 import android.content.Context
-import com.example.solidprincipleexample.b_open_closed.common.MEDIA_PLAYER_TYPE
+import com.example.solidprincipleexample.b_open_closed.example1.common.MEDIA_PLAYER_TYPE
 
 object PlayerFactoryV1 {
 

@@ -4,12 +4,13 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import com.example.solidprincipleexample.R
-import com.example.solidprincipleexample.b_open_closed.common.EXTRAS
-import com.example.solidprincipleexample.b_open_closed.common.MEDIA_PLAYER_TYPE
+import com.example.solidprincipleexample.b_open_closed.example1.common.EXTRAS
+import com.example.solidprincipleexample.b_open_closed.example1.common.MEDIA_PLAYER_TYPE
 import com.example.solidprincipleexample.a_singleresponsibilty.solution.player.IPlayerV1
 import com.example.solidprincipleexample.a_singleresponsibilty.solution.player.PlayerFactoryV1
-import com.example.solidprincipleexample.b_open_closed.solution.MediActivity_V4
+import com.example.solidprincipleexample.b_open_closed.example1.solution.MediActivity_V4
 
 class MediActivity_V2 : AppCompatActivity() {
 
@@ -29,5 +30,13 @@ class MediActivity_V2 : AppCompatActivity() {
         val mediaPlayerType =
             (intent.extras?.getSerializable(EXTRAS.PLAYER_TYPE) as MEDIA_PLAYER_TYPE)
         mediaPlayer = PlayerFactoryV1.getMediaPlayer(mediaPlayerType, this)
+        findViewById<Button>(R.id.btPlaySongV2).setOnClickListener {
+            mediaPlayer.start()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.onDestroy()
     }
 }
