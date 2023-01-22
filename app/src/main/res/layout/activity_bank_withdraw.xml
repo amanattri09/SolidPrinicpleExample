@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".c_LiskovSubstitution.problem.BankWithdrawActivity">
+    tools:context=".c_liskov_substitution.problem.BankWithdrawActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

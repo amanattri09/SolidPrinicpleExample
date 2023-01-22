@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.c_LiskovSubstitution.solution
+package com.example.solidprincipleexample.c_liskov_substitution.solution
 
 class FDAccountV2 : AccountV2{
 

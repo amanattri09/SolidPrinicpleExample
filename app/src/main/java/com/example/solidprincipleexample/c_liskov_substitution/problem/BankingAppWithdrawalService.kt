@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.c_LiskovSubstitution.problem
+package com.example.solidprincipleexample.c_liskov_substitution.problem
 
 class BankingAppWithdrawalService constructor(private val account: Account) {
 

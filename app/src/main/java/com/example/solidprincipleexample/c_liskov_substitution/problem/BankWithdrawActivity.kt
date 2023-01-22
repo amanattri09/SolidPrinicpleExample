@@ -1,10 +1,8 @@
-package com.example.solidprincipleexample.c_LiskovSubstitution.problem
+package com.example.solidprincipleexample.c_liskov_substitution.problem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.solidprincipleexample.R
-import com.example.solidprincipleexample.c_LiskovSubstitution.solution.CurrentAccountV2
-import com.example.solidprincipleexample.c_LiskovSubstitution.solution.FDAccountV2
 
 class BankWithdrawActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

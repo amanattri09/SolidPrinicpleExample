@@ -1,6 +1,6 @@
-package com.example.solidprincipleexample.c_LiskovSubstitution.problem
+package com.example.solidprincipleexample.c_liskov_substitution.problem
 
-class CurrentAccount : Account {
+class SavingAccount : Account {
 
     override fun deposit(amount: Int) {
         //Deposit code goes here
