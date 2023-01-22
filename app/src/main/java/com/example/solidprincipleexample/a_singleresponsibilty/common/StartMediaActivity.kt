@@ -11,7 +11,7 @@ class StartMediaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start_media)
         findViewById<Button>(R.id.button).setOnClickListener {
-            MediaActivity.start(this,MediaActivity.Companion.MEDIA_PLAYER_TYPE.TYPE_NATIVE)
+            MediaActivity.start(this, MEDIA_PLAYER_TYPE.TYPE_NATIVE)
         }
     }
 }

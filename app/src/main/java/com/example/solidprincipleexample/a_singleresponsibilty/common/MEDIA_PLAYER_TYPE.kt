@@ -1,5 +1,6 @@
 package com.example.solidprincipleexample.a_singleresponsibilty.common
 
-object EXTRAS{
-    const val PLAYER_TYPE="extras_media_type"
+enum class MEDIA_PLAYER_TYPE {
+    TYPE_NATIVE,
+    TYPE_EXO_PLAYER
 }

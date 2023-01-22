@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SolidPrincipleExample</string>
+    <string name="play_song">Play Song</string>
 </resources>

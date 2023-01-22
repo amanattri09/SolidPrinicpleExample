@@ -8,16 +8,17 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.solidprincipleexample.R
 import com.example.solidprincipleexample.a_singleresponsibilty.common.EXTRAS
-import com.example.solidprincipleexample.a_singleresponsibilty.common.EXTRAS.MEDIA_TYPE
+import com.example.solidprincipleexample.a_singleresponsibilty.common.EXTRAS.PLAYER_TYPE
+import com.example.solidprincipleexample.a_singleresponsibilty.common.MEDIA_PLAYER_TYPE
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 
 
 class MediaActivity : AppCompatActivity() {
 
-    private var expPlayer: ExoPlayer? = null
+    private var exoPlayer: ExoPlayer? = null
     private var playerType: MEDIA_PLAYER_TYPE = MEDIA_PLAYER_TYPE.TYPE_NATIVE
-    private lateinit var nativeMediaPlayer: MediaPlayer
+    private var nativeMediaPlayer: MediaPlayer? = null
     private lateinit var buttonPlaySong: Button
 
     companion object {
@@ -26,13 +27,8 @@ class MediaActivity : AppCompatActivity() {
 
         fun start(context: Context, playerType: MEDIA_PLAYER_TYPE) {
             context.startActivity(Intent(context, MediaActivity::class.java).apply {
-                putExtra(MEDIA_TYPE, playerType)
+                putExtra(PLAYER_TYPE, playerType)
             })
-        }
-
-        enum class MEDIA_PLAYER_TYPE {
-            TYPE_NATIVE,
-            TYPE_EXO_PLAYER
         }
 
     }
@@ -46,43 +42,50 @@ class MediaActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        nativeMediaPlayer.stop()
-        nativeMediaPlayer.release();
+        nativeMediaPlayer?.stop()
+        nativeMediaPlayer?.release();
+
+        exoPlayer?.stop()
+        exoPlayer?.release()
     }
 
     private fun setListeners() {
         buttonPlaySong = findViewById(R.id.btnPlaySong)
         buttonPlaySong.setOnClickListener {
             if (playerType == MEDIA_PLAYER_TYPE.TYPE_NATIVE) {
-                if (!nativeMediaPlayer.isPlaying) {
-                    nativeMediaPlayer.start();
-                } else {
-                    nativeMediaPlayer.pause()
+                nativeMediaPlayer?.let {nativeMediaPlayer->
+                    if (!nativeMediaPlayer.isPlaying) {
+                        nativeMediaPlayer.start();
+                    } else {
+                        nativeMediaPlayer.pause()
+                    }
                 }
             } else {
-                if (!expPlayer!!.isPlaying) {
-                    expPlayer!!.play();
-                } else {
-                    expPlayer!!.pause()
+                exoPlayer?.let {exoPlayer->
+                    if (!exoPlayer.isPlaying) {
+                        exoPlayer.play();
+                    } else {
+                        exoPlayer.pause()
+                    }
                 }
             }
         }
     }
 
     private fun init() {
-        playerType = intent.getSerializableExtra(EXTRAS.MEDIA_TYPE) as MEDIA_PLAYER_TYPE
+        playerType = intent.getSerializableExtra(EXTRAS.PLAYER_TYPE) as MEDIA_PLAYER_TYPE
         if (playerType == MEDIA_PLAYER_TYPE.TYPE_NATIVE) {
             nativeMediaPlayer = MediaPlayer()
             try {
-                nativeMediaPlayer.setDataSource(MEDIA_URI)
-                nativeMediaPlayer.prepareAsync()
+                nativeMediaPlayer!!.setDataSource(MEDIA_URI)
+                nativeMediaPlayer!!.prepareAsync()
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         } else {
-            expPlayer = ExoPlayer.Builder(this).build()
-            expPlayer!!.setMediaItem(MediaItem.fromUri(MEDIA_URI))
-            expPlayer!!.prepare()
+            exoPlayer = ExoPlayer.Builder(this).build()
+            exoPlayer!!.setMediaItem(MediaItem.fromUri(MEDIA_URI))
+            exoPlayer!!.prepare()
         }
     }
 }
