@@ -17,8 +17,7 @@ import com.google.android.exoplayer2.MediaItem
 
 class MediaActivityV1 : AppCompatActivity() {
 
-    private var playerType: MEDIA_PLAYER_TYPE = MEDIA_PLAYER_TYPE.TYPE_NATIVE
-    private var nativeMediaPlayer: MediaPlayer? = null
+    private var nativeMediaPlayer = NativeMediaPlayer()
     private lateinit var buttonPlaySong: Button
 
     companion object {
@@ -42,35 +41,21 @@ class MediaActivityV1 : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        nativeMediaPlayer?.stop()
-        nativeMediaPlayer?.release();
+        nativeMediaPlayer.stop()
     }
 
     private fun setListeners() {
         buttonPlaySong = findViewById(R.id.btnPlaySong)
         buttonPlaySong.setOnClickListener {
-            if (playerType == MEDIA_PLAYER_TYPE.TYPE_NATIVE) {
-                nativeMediaPlayer?.let {nativeMediaPlayer->
                     if (!nativeMediaPlayer.isPlaying) {
                         nativeMediaPlayer.start();
                     } else {
                         nativeMediaPlayer.pause()
                     }
                 }
-            }
         }
-    }
 
     private fun init() {
-        playerType = intent.getSerializableExtra(EXTRAS.PLAYER_TYPE) as MEDIA_PLAYER_TYPE
-        if (playerType == MEDIA_PLAYER_TYPE.TYPE_NATIVE) {
-            nativeMediaPlayer = MediaPlayer()
-            try {
-                nativeMediaPlayer!!.setDataSource(MEDIA_URI)
-                nativeMediaPlayer!!.prepareAsync()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+        nativeMediaPlayer.init(MEDIA_URI)
     }
 }
