@@ -8,7 +8,7 @@ import com.example.solidprincipleexample.b_open_closed.example2.imp.TextPrint
 
 class PrintActivity : AppCompatActivity() {
 
-    private val print: Print = TextPrint()
+    private val print: Print = PrintFactory.getPrintMachine(PrintType.TYPE_TEXT)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

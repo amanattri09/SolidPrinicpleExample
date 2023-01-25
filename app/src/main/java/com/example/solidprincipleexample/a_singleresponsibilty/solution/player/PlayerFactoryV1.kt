@@ -12,9 +12,6 @@ object PlayerFactoryV1 {
             MEDIA_PLAYER_TYPE.TYPE_EXO_PLAYER -> {
                 ExoPlayerV1(context)
             }
-            else -> {
-                NativeMediaPlayerV1()
-            }
         }
     }
 
