@@ -30,6 +30,10 @@ class MediActivity_V2 : AppCompatActivity() {
         val mediaPlayerType =
             (intent.extras?.getSerializable(EXTRAS.PLAYER_TYPE) as MEDIA_PLAYER_TYPE)
         mediaPlayer = PlayerFactoryV1.getMediaPlayer(mediaPlayerType, this)
+        setListener()
+    }
+
+    private fun setListener() {
         findViewById<Button>(R.id.btPlaySongV2).setOnClickListener {
             mediaPlayer.start()
         }
