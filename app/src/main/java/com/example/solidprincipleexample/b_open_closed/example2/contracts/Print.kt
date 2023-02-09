@@ -1,5 +1,6 @@
 package com.example.solidprincipleexample.b_open_closed.example2.contracts
 
 interface Print {
-    fun print()
+    fun printOnePage()
+    fun printAllPage()
 }
