@@ -4,12 +4,13 @@ class RubberDuck : Duck(){
 
 
     override fun quack() {
-        //override to squeak
+        //it does not speak
     }
 
     override fun display() {
         //looks like rubber duck
     }
+
 
 
 }
