@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.e_DependencyInjection.problem
+package com.example.solidprincipleexample.e_DependencyInversion.problem
 
 class NativeMediaPlayer {
      val isPlaying: Boolean

@@ -6,4 +6,8 @@ class TextPrint : Print {
     override fun printOnePage() {
         TODO("Not yet implemented")
     }
+
+    override fun printAllPage() {
+        TODO("Not yet implemented")
+    }
 }

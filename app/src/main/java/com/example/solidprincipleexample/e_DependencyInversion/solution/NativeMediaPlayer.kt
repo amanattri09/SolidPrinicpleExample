@@ -1,4 +1,4 @@
-package com.example.solidprincipleexample.e_DependencyInjection.solution
+package com.example.solidprincipleexample.e_DependencyInversion.solution
 
 class NativeMediaPlayer : IPlayer{
     override val isPlaying: Boolean
